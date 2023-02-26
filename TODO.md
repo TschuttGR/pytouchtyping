@@ -4,6 +4,9 @@ This is the to do list, before moving to the next level all the sublevels have t
 
 - [ ] Core
   - Has to be able to fully work in terminal
+  - [ ] installation script
+  - [ ] initialization script (setting up environment)
+  - [ ] working menu (selectable)
   - [ ] settings file (json)
     - [ ] colors (background, correct, wrong, ...)
     - [ ] lessons settings (length, word length, ...)
