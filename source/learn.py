@@ -1,4 +1,9 @@
-from getkey import getkey, keys # TODO replace with from sshkeyboard import listen_keyboard
+# ----------------------------------------------------------------
+# contains the functions for lessons and for learning
+# ----------------------------------------------------------------
+
+# TODO replace with from sshkeyboard import listen_keyboard
+from getkey import getkey, keys 
 
 from utils import *
 from ansi import *

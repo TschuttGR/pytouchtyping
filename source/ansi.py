@@ -1,4 +1,7 @@
+# ----------------------------------------------------------------
 # Constains all colors needed to display in terminal
+# ----------------------------------------------------------------
+
 class ANSI:
     # Reset
     Color_Off='\033[0m'       # Text Reset

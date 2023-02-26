@@ -1,3 +1,7 @@
+# ----------------------------------------------------------------
+# Contains only functions in relation with statistics
+# ----------------------------------------------------------------
+
 # submenu for  stats
 
 from utils import *

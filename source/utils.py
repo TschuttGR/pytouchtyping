@@ -1,3 +1,8 @@
+# ----------------------------------------------------------------
+# Some general crap functions
+# ----------------------------------------------------------------
+
+# TODO Objective get rid of this file
 from ansi import *
 
 

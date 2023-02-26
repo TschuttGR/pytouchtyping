@@ -3,6 +3,7 @@
 # the program to run correctly
 # ----------------------------------------------------------------
 
+# TODO add the FILES as an external json file callable with a util function 
 import os
 import sys
 import shutil

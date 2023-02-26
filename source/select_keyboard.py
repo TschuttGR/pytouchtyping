@@ -1,6 +1,9 @@
+# ----------------------------------------------------------------
+# This file contains all functions change or add a new 
+# keyboard layout
+# ----------------------------------------------------------------
 
 import os
-
 
 from utils import *
 from display_terminal import *

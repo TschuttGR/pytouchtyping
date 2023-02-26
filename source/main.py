@@ -1,4 +1,6 @@
+# ----------------------------------------------------------------
 # Main loop
+# ----------------------------------------------------------------
 
 import os
 from getkey import getkey, keys # TODO replace with from sshkeyboard import listen_keyboard
