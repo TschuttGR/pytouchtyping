@@ -1,8 +1,61 @@
-# Contains all functions to display in the terminal
-# Objective: adabtive window size with minimal 24x80.
+# ----------------------------------------------------------------
+# Contains only functions to display in the terminal
+# ----------------------------------------------------------------
+
+import os
+import time # temporary
 
 from utils import *
-from ansi import *
+from ansi import * # TODO remove ansi dependency
+
+# returns the maximum line size in function of terminal width
+def max_line_length():
+    return max(os.get_terminal_size().columns-16,64)
+
+# returns the maximum line numbers in function of terminal height
+def max_line_length():
+    return max(os.get_terminal_size().lines-4,20)
+
+# general pretty print for terminal
+def display(
+    title="HELLO WORLD", 
+    lines = [],
+    cursor=-1
+    ):
+    """Cursor: position of cursor from top to bottom, -1 = no cursor"""
+    """Title is centered"""
+    """Data is an array of lines, OF CORRECT SIZE"""
+    print('\033[?25l', end="") # hide cursor
+    len_title = len(title)
+    len_lines = len(lines)
+    rows = os.get_terminal_size().lines
+    cols = os.get_terminal_size().columns
+
+    # move cursor up
+    print("\033["+str(rows)+"A",end="")
+    print("\033["+str(cols)+"D",end="")
+    for i in range(rows-1):
+        print(" "*cols)
+    # Print title
+    offset = (cols - len_title)//2
+    print("\033["+str(rows-2)+"A",end="")
+    print("\033["+str(offset)+"C"+title)
+    print("")
+    # print remaing lines
+    for i in range(len_lines):
+        offset = "     >  "
+        if i != cursor:
+            offset = " "*8
+        print(offset+lines[i])
+
+    print("\033["+str(rows)+"A",end="")
+    print("\033["+str(cols)+"D",end="")
+
+display("TITLE",["Some","random","text."],0)
+time.sleep(5)
+
+# ----------------------------------------------------------------
+# From here on comes the crap
 
 # prints a 9*80 block
 # plist is the data and h the height
